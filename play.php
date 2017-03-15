@@ -1,4 +1,9 @@
 <?php
 
-echo 'IT\'S A TRAP!!!';
+class Ship{
+  
+}
+
+//but it doesn't do anything yet
+$myShip=new Ship();
 
