@@ -21,6 +21,7 @@ class Ship{
 //but it doesn't do anything yet
 $myShip=new Ship();
 $myShip->name = 'Jedi Starship';
+$myShip->weaponPower = 10;
 //$myShip->name = 'TIE Fighter';
 
 echo 'Ship Name: ' . $myShip->getName();
