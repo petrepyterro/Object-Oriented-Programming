@@ -15,6 +15,16 @@ class Ship{
   public function getName() {
     return $this->name;
   }
+  
+  public function getNameAndSpecs() {
+    return sprintf(
+      '%s (w:%s, j:%s, s:%s)',
+      $this->name,
+      $this->weaponPower,
+      $this->jediFactor,
+      $this->strength      
+    );
+  }
 }
 //but it doesn't do anything yet
 $myShip=new Ship();
@@ -27,3 +37,5 @@ echo '<hr>';
 echo $myShip->getName();
 echo '<hr/>';
 var_dump($myShip->weaponPower);
+echo '<hr>';
+echo 'Ship Description: '. $myShip->getNameAndSpecs();
