@@ -17,13 +17,23 @@ class Ship{
   }
   
   public function getNameAndSpecs() {
-    return sprintf(
-      '%s (w:%s, j:%s, s:%s)',
-      $this->name,
-      $this->weaponPower,
-      $this->jediFactor,
-      $this->strength      
-    );
+    if ($useShortFormat){
+      return sprintf(
+        '%s %s%s%s',
+        $this->name,
+        $this->weaponPower,
+        $this->jediFactor,
+        $this->strength      
+      );
+    } else {
+      return sprintf(
+        '%s (w:%s, j:%s, s:%s)',
+        $this->name,
+        $this->weaponPower,
+        $this->jediFactor,
+        $this->strength      
+      );
+    }
   }
 }
 //but it doesn't do anything yet
@@ -38,4 +48,6 @@ echo $myShip->getName();
 echo '<hr/>';
 var_dump($myShip->weaponPower);
 echo '<hr>';
-echo 'Ship Description: '. $myShip->getNameAndSpecs();
+echo 'Ship Description: '. $myShip->getNameAndSpecs(false);
+echo '<hr>';
+echo 'Ship Description: '. $myShip->getNameAndSpecs(true);
