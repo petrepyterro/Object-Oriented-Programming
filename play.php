@@ -16,7 +16,7 @@ class Ship{
     return $this->name;
   }
   
-  public function getNameAndSpecs() {
+  public function getNameAndSpecs($useShortFormat) {
     if ($useShortFormat){
       return sprintf(
         '%s %s%s%s',
@@ -36,19 +36,22 @@ class Ship{
     }
   }
 }
-//but it doesn't do anything yet
+
+function printShipSummary($someShip){
+  echo 'Ship Name: '.$someShip->name;
+  echo '<hr>';
+  echo $someShip->sayHello();
+  echo '<hr>';
+  echo $someShip->getName();  
+  echo '<hr>';
+  echo 'Ship Description: '. $someShip->getNameAndSpecs(false);
+  echo '<hr>';
+  echo 'Ship Description: '. $someShip->getNameAndSpecs(true);
+}
+
 $myShip=new Ship();
 $myShip->name = 'Jedi Starship';
 $myShip->weaponPower = 10;
-echo 'Ship Name: '.$myShip->name;
-echo '<hr>';
-echo $myShip->sayHello();
-echo '<hr>';
-echo $myShip->getName();
-echo '<hr/>';
-var_dump($myShip->weaponPower);
-echo '<hr>';
-echo 'Ship Description: '. $myShip->getNameAndSpecs(false);
-echo '<hr>';
-echo 'Ship Description: '. $myShip->getNameAndSpecs(true);
+
+printShipSummary($myShip);
 
