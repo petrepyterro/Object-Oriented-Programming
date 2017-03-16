@@ -3,6 +3,12 @@
 class Ship{
   public $name; 
   
+  public $weaponPower;
+  
+  public $jediFactor;
+  
+  public $strength;
+  
   public function sayHello(){
     echo 'HELLO!';
   }
