@@ -4,6 +4,7 @@ class Ship{
   private $weaponPower = 0;
   private $jediFactor = 0;
   private $strength = 0;
+  private $underRepair;
   public function sayHello()
   {
     echo 'Hello!';
