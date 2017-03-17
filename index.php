@@ -2,7 +2,6 @@
 require __DIR__.'/functions.php';
 
 $ships = get_ships();
-var_dump($ships);die;
 
 $errorMessage = '';
 if (isset($_GET['error'])) {
