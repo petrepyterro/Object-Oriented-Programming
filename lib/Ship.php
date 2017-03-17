@@ -42,4 +42,8 @@ class Ship{
   public function setStrength($strength){
     $this->strength = $strength;
   }
+  
+  public function getStrength(){
+    return $this->strength;
+  }
 }
