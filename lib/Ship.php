@@ -10,7 +10,7 @@ class Ship{
   }
   public function getName()
   {
-    return $this->name;
+    return strtoupper($this->name);
   }
   
   public function getWeaponPower()
