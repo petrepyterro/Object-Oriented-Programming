@@ -10,10 +10,7 @@ class Ship{
     $this->underRepair = mt_rand(1, 100) < 30;
   }
   
-  public function sayHello()
-  {
-    echo 'Hello!';
-  }
+  
   public function getName()
   {
     return $this->name;
@@ -42,6 +39,10 @@ class Ship{
   public function setJediFactor($jediFactor)
   {
     $this->jediFactor = $jediFactor;
+  }
+  
+  public function isFunctional(){
+    return !$this->underRepair;
   }
   
   public function getNameAndSpecs($useShortFormat = false)
