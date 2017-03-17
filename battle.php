@@ -67,8 +67,8 @@ $outcome = battle($ship1, $ship1Quantity, $ship2, $ship2Quantity);
                 <h3 class="text-center audiowide">
                     Winner:
                     <?php if ($outcome['winning_ship']): ?>
-                       <?php var_dump($outcome); ?>
-                        <?php echo $outcome['winning_ship']['name']; ?>
+                       
+                        <?php echo $outcome['winning_ship']->getName(); ?>
                     <?php else: ?>
                         Nobody
                     <?php endif; ?>
@@ -77,11 +77,11 @@ $outcome = battle($ship1, $ship1Quantity, $ship2, $ship2Quantity);
                     <?php if ($outcome['winning_ship'] == null): ?>
                         Both ships destroyed each other in an epic battle to the end.
                     <?php else: ?>
-                        The <?php echo $outcome['winning_ship']['name']; ?>
+                        The <?php echo $outcome['winning_ship']->getName(); ?>
                         <?php if ($outcome['used_jedi_powers']): ?>
                             used its Jedi Powers for a stunning victory!
                         <?php else: ?>
-                            overpowered and destroyed the <?php echo $outcome['losing_ship']['name'] ?>s
+                            overpowered and destroyed the <?php echo $outcome['losing_ship']->getName() ?>s
                         <?php endif; ?>
                     <?php endif; ?>
                 </p>
