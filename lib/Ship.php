@@ -12,6 +12,8 @@ class Ship{
   {
     return $this->name;
   }
+  
+  
   public function getNameAndSpecs($useShortFormat = false)
   {
     if ($useShortFormat) {
@@ -35,5 +37,9 @@ class Ship{
   public function doesGivenShipHaveMoreStrength($givenShip)
   {
     return $givenShip->strength > $this->strength;
+  }
+  
+  public function setStrength($strength){
+    $this->strength = $strength;
   }
 }
