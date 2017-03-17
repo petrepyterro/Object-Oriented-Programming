@@ -5,6 +5,11 @@ class Ship{
   private $jediFactor = 0;
   private $strength = 0;
   private $underRepair;
+  
+  public function __construct() {
+    echo 'Automatically called!';
+  }
+  
   public function sayHello()
   {
     echo 'Hello!';
