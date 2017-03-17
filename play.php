@@ -35,6 +35,10 @@ class Ship{
       );
     }
   }
+  
+  public function doesGivenShipHaveMoreStrength($givenShip){
+    
+  }
 }
 
 function printShipSummary($someShip){
