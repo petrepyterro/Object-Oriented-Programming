@@ -7,7 +7,7 @@ class Ship{
   private $underRepair;
   
   public function __construct() {
-    echo 'Automatically called!';
+    $this->underRepair = mt_rand(1, 100) < 30;
   }
   
   public function sayHello()

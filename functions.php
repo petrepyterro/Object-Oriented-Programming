@@ -32,6 +32,7 @@ function get_ships()
   $ship4->setJediFactor(4);
   $ship4->setStrength(50);
   $ships['rz1_a_wing_interceptor'] = $ship4;
+  var_dump($ships);die();
   
   return $ships;
 }
