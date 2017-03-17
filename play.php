@@ -41,12 +41,16 @@ class Ship{
   }
 }
 
+/**
+ * 
+ * @param Ship $someShip
+ */
 function printShipSummary($someShip){
   echo 'Ship Name: '.$someShip->name;
   echo '<hr>';
   echo $someShip->sayHello();
   echo '<hr>';
-  echo $someShip->getName();  
+  echo $someShip->getName();
   echo '<hr>';
   echo 'Ship Description: '. $someShip->getNameAndSpecs(false);
   echo '<hr>';
