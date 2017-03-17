@@ -40,6 +40,10 @@ class Ship{
   }
   
   public function setStrength($strength){
+    if(!is_numeric($strength)){
+      throw new Exception('Invalid strength passed '.$strength);
+    }
+    
     $this->strength = $strength;
   }
   
